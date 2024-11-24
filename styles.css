@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-.weather-container {
+.game-container {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -25,16 +25,32 @@ body {
     width: 100%;
 }
 
-input {
-    width: 70%;
-    padding: 10px;
-    font-size: 16px;
+h1 {
+    font-size: 24px;
+    color: #333;
     margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
 }
 
 button {
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;
@@ -48,12 +64,8 @@ button:hover {
     background-color: #45a049;
 }
 
-.weather-info {
+#message {
     margin-top: 20px;
     font-size: 18px;
-    line-height: 1.6;
-}
-
-.weather-info p {
-    margin: 10px 0;
+    font-weight: bold;
 }
